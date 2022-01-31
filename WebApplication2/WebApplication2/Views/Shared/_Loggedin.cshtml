@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div><a class="btn btn-info" href="/Person/Home">Home</a><a class="btn btn-danger" href="/person/list">List</a></div>
+    <div>
+        @RenderBody()
+    </div>
+    <h6 class="panel-footer">footer</h6>
+</body>
+</html>
