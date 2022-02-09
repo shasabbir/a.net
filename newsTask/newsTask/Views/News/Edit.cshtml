@@ -1,0 +1,15 @@
+﻿@model newsTask.Models.Database.news
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+<form  action="/News/Edit" method="post">
+    <input type="hidden" name="id" value="@Model.id" />
+    <input type="text" placeholder="title" name="title" value="@Model.title" />
+    <input type="text" placeholder="description" name="description" value="@Model.description" />
+    <input type="text" placeholder="catagory" name="catagory" value="@Model.catagory" />
+    <input type="text" placeholder="publishdate" name="publishdate" value="@Model.publishdate" />
+    <input type="submit" value="Edit" />
+</form>
+
