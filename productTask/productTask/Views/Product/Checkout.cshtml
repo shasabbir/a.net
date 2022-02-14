@@ -1,0 +1,31 @@
+﻿@model List<productTask.Models.Database.product>
+@{
+    ViewBag.Title = "Checkout";
+}
+
+<h2>Checkout</h2>
+@if (Model != null)
+{
+    <table class="table table-condensed">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Action</th>
+        </tr>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.id</td>
+                <td>@p.name</td>
+                <td>@p.description</td>
+                <td>
+                    <a class="btn btn-danger" href="/Product/Removefromcart/@p.id">Remove from cart</a>
+                </td>
+
+            </tr>
+        }
+    </table>
+}
+
+<a class="btn btn-info" href="/Product/">Continue Shopping</a>
